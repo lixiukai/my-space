@@ -1,0 +1,17 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+authors = ["kai"]
+description = "基于Rocket框架的web后端系统"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+toml = "0.8.12"
+rocket = { version = "0.5.0", features = ["json"] }
+serde_json = "1.*"
+serde = { version = "1.0", features = ["derive"] }
+# sea-orm 框架配置
+sea-orm = { version = "0.12.15", features = [ "sqlx-mysql", "runtime-tokio-rustls", "macros" ] }
+log = "0.4.21"
